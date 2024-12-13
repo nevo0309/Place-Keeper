@@ -1,0 +1,7 @@
+.main-nav {
+  font-size: 1.5rem;
+  color: var(--clr-primary);
+}
+.main-nav li:not(:last-child) {
+  margin-inline-end: 80px;
+}

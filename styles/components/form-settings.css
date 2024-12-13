@@ -1,0 +1,113 @@
+/* General form container styling */
+.form-container {
+  background: #1c1c1e;
+  border: 3px solid #00ffff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 500px;
+  margin: 40px auto;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Form labels */
+.form-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #00ffff;
+  font-size: 18px;
+}
+
+/* Inputs */
+
+.form-container input[type='email'],
+.form-container input[type='date'],
+.form-container input[type='time'],
+.form-container input[type='range'] {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  background: #2a2a2c;
+  color: #ffffff;
+  outline: none;
+}
+
+.form-container input[type='color'] {
+  display: inline-block;
+  margin-bottom: 25px;
+  width: 50%;
+  height: 50px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Color pickers container for grouping */
+.color-pickers-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.color-pickers-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+/* Slider style */
+.form-container input[type='range'] {
+  -webkit-appearance: none; /* remove the defualt style of the slider*/
+  height: 8px;
+  background: #3a3a3c;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.form-container input[type='range']::-webkit-slider-thumb {
+  /* change the  style of the slider*/
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #00ffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Headings inside the form */
+.form-container h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #00ffff;
+  padding-bottom: 10px;
+}
+
+/* Submit button */
+.form-container button {
+  background: #00ffff;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%; /* Full-width button */
+}
+
+.form-container button:hover {
+  background: #005f5f;
+  color: #ffffff;
+}
