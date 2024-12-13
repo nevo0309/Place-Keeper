@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Settings</title>
+  </head>
+  <body onload="renderUserPrefs()" class="background-black">
+    <header class="main-header">
+      <nav class="main-nav">
+        <ul class="flex justify-center align-center clean-list">
+          <li><a href="index.html" class="internal-link">Home-Page</a></li>
+          <li><a href="map.html" class="internal-link">Map</a></li>
+          <li>
+            <a href="user-settings.html" class="internal-link">Settings</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form class="form-container" id="form-container" onsubmit="onSubmit(event)">
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" id="email" />
+
+        <label for="age-lable">
+          Age:
+          <span class="sAge">20</span>
+        </label>
+        <input class="age" type="range" name="age" id="age" min="18" max="80" value="20" onchange="onShowAge(this.value)" />
+
+        <h2>Colors</h2>
+
+        <div class="color-pickers-container">
+          <label for="background-color">Background Color:</label>
+          <input type="color" name="backgroundColor" value="#000000" id="background-color" />
+
+          <label for="color">Text Color:</label>
+          <input type="color" name="color" value="#63b6c4" id="color" />
+        </div>
+
+        <label for="date-input">BirthDate:</label>
+        <input type="date" name="date" id="date-input" />
+
+        <label for="time-input">BirthTime:</label>
+        <input type="time" name="time" id="time-input" />
+        <button>Submit</button>
+      </form>
+    </main>
+
+    <section></section>
+
+    <footer></footer>
+
+    <script src="JS/services/util.service.js"></script>
+    <script src="JS/services/storage.service.js"></script>
+    <script src="JS/services/user-settings.service.js"></script>
+    <script src="JS/user-settings.controller.js"></script>
+  </body>
+</html>

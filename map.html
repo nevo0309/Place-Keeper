@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>map</title>
+  </head>
+  <body onload="onInit()" class="background-black map-body-layout">
+    <header class="main-header">
+      <nav class="main-nav">
+        <ul class="flex justify-center align-center clean-list">
+          <li><a href="index.html" class="internal-link">Home-Page</a></li>
+          <li><a href="map.html" class="internal-link">Map</a></li>
+          <li>
+            <a href="user-settings.html" class="internal-link">Settings</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="map"></div>
+
+      <button class="open-modal-btn" onclick="openAddPlaceModal()">Add Place</button>
+
+      <div id="place-modal" class="modal hidden">
+        <div class="modal-content">
+          <h2 id="modal-title">Add Place</h2>
+          <form onsubmit="onAddOrUpdatePlace(event)">
+            <label for="place-name">Name:</label>
+            <input type="text" id="place-name" name="place-name" required />
+            <label for="place-lat">Latitude:</label>
+            <input type="number" id="place-lat" name="place-lat" step="any" required />
+            <label for="place-lng">Longitude:</label>
+            <input type="number" id="place-lng" name="place-lng" step="any" required />
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <section class="places">
+        <ul class="places-list"></ul>
+        <button class="locate-btn" onclick="onUserLocation()">My Location</button>
+      </section>
+    </main>
+
+    <section></section>
+
+    <footer></footer>
+
+    <script src="JS/services/util.service.js"></script>
+    <script src="JS/services/storage.service.js"></script>
+    <script src="JS/services/map.service.js"></script>
+    <script src="JS/map.controller.js"></script>
+
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpge7IgmfUfXiXFEqaeTr_PGBD5n3WRL0&callback=initMap"></script>
+  </body>
+</html>
